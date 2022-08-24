@@ -44,7 +44,7 @@ def index():
         hundred = hundred_word_summary(final_output)
         print("This is hundred",hundred)
         data['news'] = hundred
-    return "data"
+    return data
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
