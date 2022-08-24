@@ -12,22 +12,6 @@ import Dialog from '@mui/material/Dialog';
 import img from "../src/newsDefault.png"
 function News(props) {
   const [simplified, setSimplified] = useState(false)
-  let location = useLocation();
-  const handleClick=()=>{
-    sessionStorage.setItem('scrollPosition', window.scrollY);
-  }
-const handleScrollPosition = () => {
-  const scroPosition =  sessionStorage.getItem("scrollPosition");
-    if (parseInt(scroPosition)>0) {
-      window.scrollTo(0, parseInt(scroPosition));
-    }
-    sessionStorage.removeItem("scrollPosition");
-  };
-  useEffect(() => {
-    handleScrollPosition();
-    setSimplified(false)
-  },[props.topic])
-
   const [open, setOpen] = useState(false);
   const handleClickToOpen = () => {
     setOpen(true);
@@ -55,11 +39,6 @@ const handleScrollPosition = () => {
               </p>
           </div>
           <div className="actionDiv">
-            <button className="actionButtons actionSimplify" onClick={(e)=>{
-              simplified?setSimplified(false):setSimplified(true)
-            }}>{simplified?<p>{props.getPageLang=='en'?'Original Text':'मूल लेख'}</p>:<p>{props.getPageLang=='en'?'Simplify It':'इसे सरल करें'}</p>}</button>
-            <button className="actionButtons " onClick={handleClick}><Link className="moreLink" to={location.pathname==='/'?'news/more':'policies/more'}>{props.getPageLang=='en'?'Analyse It':'विश्लेषण करें'}</Link></button>
-            
           </div>
           <div className="readMore">
             <p><a className="linkSrc" onClick={handleClickToOpen}>{props.getPageLang=='en'?'Get Full Context': 'पूरा संदर्भ प्राप्त करें'}</a></p>
