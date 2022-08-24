@@ -1,5 +1,4 @@
 from flask import Flask, request
-from Simplify import simplify_it
 from indexSumarize import summarize, hundred_word_summary
 
 app = Flask(__name__)
@@ -7,7 +6,6 @@ app = Flask(__name__)
 @app.route('/get', methods=['GET', 'POST'])
 def index():
     global final_output, data
-    data=dict()
     if request.method == 'POST':
         data = request.get_json()
         input_text = data['news']
@@ -46,10 +44,7 @@ def index():
         hundred = hundred_word_summary(final_output)
         print("This is hundred",hundred)
         data['news'] = hundred
-        simplified = simplify_it(hundred)
-        print(simplified)
-        data['simplify'] = simplified
-    return data
+    return "data"
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)

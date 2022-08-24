@@ -4,9 +4,8 @@ import re
 # -------------------------------------------------------------------------------------------------------------------------------
 # model = AutoModelForSeq2SeqLM.from_pretrained('facebook/bart-large-cnn') # google/pegasus-newsroom or facebook/bart-large-cnn or Yale-LILY/brio-cnndm-cased
 # tokenizer = AutoTokenizer.from_pretrained('facebook/bart-large-cnn') 
-
-model = AutoModelForSeq2SeqLM.from_pretrained('facebook/bart-large-cnn') # google/pegasus-newsroom or facebook/bart-large-cnn or Yale-LILY/brio-cnndm-cased
-tokenizer = AutoTokenizer.from_pretrained('facebook/bart-large-cnn') 
+model = AutoModelForSeq2SeqLM.from_pretrained('facebook/bart-large-cnn') # google/pegasus-newsroom or facebook/bart-large-cnn or Yale-LILY/brio-cnndm-cased 
+tokenizer = AutoTokenizer.from_pretrained("facebook/bart-large-cnn")
 
 def summarize(raw_text):
 
@@ -91,7 +90,3 @@ def hundred_word_summary(decoded_summary):
 
   return final_summary
 
-# if __name__== "__main__":
-#   raw_text = "The indian sapce is very gog jking to yo"
-#   summary = summarize(raw_text)
-#   print(summary)

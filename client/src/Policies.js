@@ -43,11 +43,11 @@ function Policies(props) {
       policiesData.map((ele)=>{
         return <News title={ele.hindiHeading} 
         date={ele.hindiDate}
-        category={ele.Domain} source={ele.hindiSource} content={ele.hindiSumarize} simplify={ele.hindiSimplify} image={ele.Image_Url} getPageLang={seeLang}/>
+        category={ele.Domain} topic="topic" source={ele.hindiSource} content={ele.hindiSumarize} simplify={ele.hindiSimplify} image={ele.Image_Url} getPageLang={seeLang}/>
       }):totalPolicyData.length?totalPolicyData.map((ele)=>{
         return <News title={ele.hindiHeading} 
         date={ele.hindiDate}
-        category={ele.Domain} source={ele.hindiSource} content={ele.hindiSumarize} simplify={ele.hindiSimplify} image={ele.Image_Url} getPageLang={seeLang}/>
+        category={ele.Domain} topic="topic" source={ele.hindiSource} content={ele.hindiSumarize} simplify={ele.hindiSimplify} image={ele.Image_Url} getPageLang={seeLang}/>
       }):<NoHindiSearch/>}
       </div>
     </div>

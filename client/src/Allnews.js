@@ -3,10 +3,8 @@ import "./Allnews.css";
 import News from "./News";
 import NoSearch from "./NoSearch";
 import axios from 'axios';
-import translate from "translate";
 import NoHindiSearch from "./NoHindiSearch";
 
-translate.engine = "google";
 
 function Allnews(props) {
   const [newsData, setNewsData] = useState([]);
@@ -29,27 +27,26 @@ function Allnews(props) {
   useEffect(async() => {
     await getNews();
   },[props.topic, currLang]);
-  const totalData = props.topic==='top'?newsData:newsData.filter(element=>element.category===props.topic)
-  const totalSearchData = newsData.filter(e=>e.heading.toLowerCase().includes(props.viewInput.toLowerCase()))
-  const totalHindiSearchData = newsData.filter(e=>e.hheading.includes(props.viewInput))
-// console.log(totalData.map((e)=>{return e}))
+  const totalData = newsData.filter(element=>element.category===props.topic)
+  const totalSearchData = totalData.filter(e=>e.heading.toLowerCase().includes(props.viewInput.toLowerCase()))
+  const totalHindiSearchData = totalData.filter(e=>e.hheading.includes(props.viewInput))
 console.log(props.viewInput)
 return (<div className="container">
     {currLang=='en'?props.viewInput===''?totalData.map((ele)=>{
           return <News title={ele.heading}
           date={ele.newsDate}
-          category={ele.category} source={ele.source} content={ele.news} simplify = {ele.simplify} image={ele.imageUrl} additionalUrl={ele.newsUrl} getPageLang={currLang}
+          category={ele.category} topic = {props.topic} source={ele.source} content={ele.news} simplify = {ele.simplify} image={ele.imageUrl} additionalUrl={ele.newsUrl} getPageLang={currLang}
           />
     }):
     totalSearchData.length ? totalSearchData.map((ele)=>{
       return <News title={ele.heading} 
       date={ele.newsDate}
-      category={ele.category} source={ele.source} content={ele.news} simplify = {ele.simplify} image={ele.imageUrl} additionalUrl={ele.newsUrl} getPageLang={currLang}/>
+      category={ele.category} topic = {props.topic} source={ele.source} content={ele.news} simplify = {ele.simplify} image={ele.imageUrl} additionalUrl={ele.newsUrl} getPageLang={currLang}/>
     }):<NoSearch/>:
     props.viewInput===''?totalData.map((ele)=>{
-      return <News title={ele.hheading} date={ele.hnewsDate} category={ele.category} getPageLang={currLang} additionalUrl={ele.additionalUrl} source={ele.hsource} content={ele.hnews} simplify = {ele.hsimplified} image={ele.imageUrl} />
+      return <News title={ele.hheading} date={ele.hnewsDate} category={ele.category} getPageLang={currLang} additionalUrl={ele.additionalUrl} topic = {props.topic} source={ele.hsource} content={ele.hnews} simplify = {ele.hsimplified} image={ele.imageUrl} />
     }):totalHindiSearchData.length?totalHindiSearchData.map((ele)=>{
-      return <News title={ele.hheading} date={ele.hnewsDate} category={ele.category} getPageLang={currLang} additionalUrl={ele.additionalUrl} source={ele.hsource} content={ele.hnews} simplify = {ele.hsimplified} image={ele.imageUrl} />
+      return <News title={ele.hheading} date={ele.hnewsDate} category={ele.category} getPageLang={currLang} additionalUrl={ele.additionalUrl} topic = {props.topic} source={ele.hsource} content={ele.hnews} simplify = {ele.hsimplified} image={ele.imageUrl} />
     }):<NoHindiSearch/>
   }
   </div>

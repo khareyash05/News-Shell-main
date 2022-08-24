@@ -2,11 +2,8 @@ const express = require("express");
 const fs = require("fs");
 const axios = require("axios").default;
 require("./conn/conn");
-var bodyParser = require("body-parser");
-var request = require("request");
 const dbConnect = require("./conn/connHindi");
 const newsSchema = require("./model/model");
-const hindiNewsSchema = require("./model/hindiModel.js");
 const app = express();
 const port = process.env.PORT || 8000;
 const translate = require("translate");
@@ -121,7 +118,7 @@ const sendIt = async (req, res) => {
           console.log("Get data" + data.data);
           // console.log("Get data"+data.data.news)
           let hindiNews = await main(data.data);
-          // console.log("This is hindinews"+hindiNews)
+          console.log("This is hindinews"+hindiNews)
           await datafrom.updateOne(
             { heading: data.data.heading },
             {
@@ -149,10 +146,6 @@ app.get("/", async (req, res) => {
   const getData = await getNewData();
   res.send(getData);
 });
-setInterval(() => {
-  getPosts();
-  getCount();
-}, 270000);
 app.get("/sumarize", (req, res) => {
   data = {};
   fs.readFile("data.json", (err, fd) => {
