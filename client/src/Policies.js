@@ -31,23 +31,31 @@ function Policies(props) {
     policiesData.map((ele)=>{
       return <News title={ele.Headline} 
       // date={ele.Date.Time}
-      category={ele.Domain} source={ele.Source} content={ele.Summarized_News} simplify={ele.simplified} image={ele.Image_Url} getPageLang={seeLang}/>
+      category={ele.Domain} 
+      // source={ele.Source}
+       additionalUrl={ele.newsUrl} content={ele.Summarized_News} simplify={ele.simplified} image={ele.Image_Url} getPageLang={seeLang}/>
     })
     :totalPolicySearchData.length?totalPolicySearchData.map((ele)=>{
       return <News title={ele.Headline} 
       // date={ele.Date.Time}
-      category={ele.Domain} source={ele.Source} content={ele.Summarized_News} simplify={ele.simplified} image={ele.Image_Url} getPageLang={seeLang}/>
+      category={ele.Domain} 
+      // source={ele.Source} 
+      additionalUrl={ele.newsUrl} content={ele.Summarized_News} simplify={ele.simplified} image={ele.Image_Url} getPageLang={seeLang}/>
     }):<NoSearch/>:
     props.getpolicyWords===''?
     // policiesData.map((ele)=>{
       policiesData.map((ele)=>{
         return <News title={ele.hindiHeading} 
         // date={ele.hindiDate}
-        category={ele.Domain} topic="topic" source={ele.hindiSource} content={ele.hindiSumarize} simplify={ele.hindiSimplify} image={ele.Image_Url} getPageLang={seeLang}/>
+        category={ele.Domain} topic="topic" 
+        // source={ele.hindiSource}
+         additionalUrl={ele.newsUrl} content={ele.hindiSumarize} simplify={ele.hindiSimplify} image={ele.Image_Url} getPageLang={seeLang}/>
       }):totalPolicyData.length?totalPolicyData.map((ele)=>{
         return <News title={ele.hindiHeading} 
         // date={ele.hindiDate}
-        category={ele.Domain} topic="topic" source={ele.hindiSource} content={ele.hindiSumarize} simplify={ele.hindiSimplify} image={ele.Image_Url} getPageLang={seeLang}/>
+        category={ele.Domain} topic="topic" 
+        // source={ele.hindiSource}
+        additionalUrl={ele.newsUrl} content={ele.hindiSumarize} simplify={ele.hindiSimplify} image={ele.Image_Url} getPageLang={seeLang}/>
       }):<NoHindiSearch/>}
       </div>
     </div>
