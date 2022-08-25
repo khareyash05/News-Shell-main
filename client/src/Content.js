@@ -11,7 +11,7 @@ function Content(props) {
   var seeLang = props.getLang;
   var viewWords = props.getWords;
     const topics = [
-        { id: 0, topic: "Top Headlines", category: "top" },
+        { id: 0, topic: "All News", category: "top" },
         { id: 1, topic: "Business", category: "business" },
         { id: 2, topic: "Education", category: "science" },
         { id: 3, topic: "Entertainment", category: "entertainment" },

@@ -27,7 +27,7 @@ function Allnews(props) {
   useEffect(async() => {
     await getNews();
   },[props.topic, currLang]);
-  const totalData = newsData.filter(element=>element.category===props.topic)
+  const totalData = props.topic=='top'?newsData:newsData.filter(element=>element.category===props.topic)
   const totalSearchData = totalData.filter(e=>e.heading.toLowerCase().includes(props.viewInput.toLowerCase()))
   const totalHindiSearchData = totalData.filter(e=>e.hheading.includes(props.viewInput))
 console.log(props.viewInput)
