@@ -6,3 +6,4 @@ model_CWI_full.h5
 env
 
 src/__pycache__
+.cpp
