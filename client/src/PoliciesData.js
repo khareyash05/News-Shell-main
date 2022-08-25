@@ -50,5 +50,39 @@ const policiesData = [
     "Image_Url": "https://www.sanskritiias.com/uploaded_files/images/ayushman-sahakar-scheme.jpg",
     "Source": "indian express"
   },
+  {
+   "Domain": "India",
+   "Headline": "Pradhan Mantri Jeevan Jyoti Bima Yojana(PMJJBY)",
+   "Date": {
+      "Time": "9 May"
+   },
+   "News": "The PMJJBY is available to people in the age group of 18 to 50 years having a bank account who give their consent to join / enable auto-debit. Aadhar would be the primary KYC for the bank account. The life cover of Rs. 2 lakhs shall be for the one year period stretching from 1st June to 31st May and will be renewable. Risk coverage under this scheme is for Rs. 2 Lakh in case of death of the insured, due to any reason. The premium is Rs. 436 per annum which is to be auto-debited in one installment f rom the subscriber’s bank account as per the option given by him on or before 31st May of each annual coverage period under the scheme. The scheme is being offered by Life Insurance Corporation and all other life insurers who are willing to offer the product on similar terms with necessary approvals and tie up with banks for this purpose.",
+   "Summarized_News":"PMJJBY is available to people in the age group of 18 to 50 years having a bank account who give their consent to join / enable auto-debit. Aadhar would be the primary KYC for the bank account. The PMJJBY will be available in the UK until the end of the year. It will be rolled out to the rest of the UK in the next few months. For confidential support call the Samaritans on 08457 90 90 90, visit a local Samaritans branch or see www.samaritans.org.",
+   "hindiSumarize":"पीएमजेजेजेबीवाई 18 से 50 वर्षों के आयु वर्ग के लोगों के लिए एक बैंक खाता है जो ऑटो डेबिट में शामिल होने / सक्षम करने के लिए अपनी सहमति देते हैं। आधार बैंक खाते के लिए प्राथमिक KYC होगा। PMJBY ब्रिटेन में वर्ष के अंत तक उपलब्ध होगा। यह अगले कुछ महीनों में ब्रिटेन के बाकी हिस्सों में बाहर हो जाएगा। गुप्त समर्थन के लिए Samaritans को 08457 90 90 90 90 पर कॉल करें, स्थानीय Samaritans शाखा पर जाएं या देखें www.samaritans.org",
+   "hindiSimplify":"प्रधानमंत्री ने 15 अगस्त 2014 को अपने स्वतंत्रता दिवस के भाषण में वित्तीय समावेशन पर राष्ट्रीय मिशन के रूप में राष्ट्रीय जन धन योजना की घोषणा की। उद्देश्य देश में पूर्ण वित्तीय सुरक्षा सुनिश्चित करना है। सिस्टम को तीन साल की अवधि में रोल किया जाएगा। सिस्टम का पहला वर्ष 2015 के अंत तक पूरा होने की उम्मीद है।.",
+   "hindiHeading":"प्रधान मंत्री जीवन ज्योति बीमा योजना (पीएमजेजेबीवाई)",
+   "hindiDate":"9 मई",
+   "hindiSource":"डिपार्टमेंट ऑफ फाइनेंशियल सर्विसेज",
+   "simplified":"The Prime Minister announced national sir Jan india award as the National Mission on Financial Inclusion in his Independence Day address on 15th August 2014. The aim is to ensure full financial security in the country. The system will be rolled out over a period of three years. The first year of the system is expected to be completed by the end of 2015.",
+   "Image_Url": "https://www.bajajallianzlife.com/content/dam/balic/index/bannerimage/Pradhan-Mantri-Jeevan-Jyoti-Bima-Yojana.png",
+   "Source": "Department of Financial Services"
+},
+  {
+   "Domain": "India",
+   "Headline": "Make In India",
+   "Date": {
+      "Time": "9 May"
+   },
+   "News": "Make in India is a Government of India scheme launched by Prime Minister Narendra Modi in 2014 intended to boost the domestic manufacturing sector and also augment investment into the country.The Make in India website also has listed the 25 focus sectors and also furnished all relevant details about these sectors, and related government schemes, including the FDI policies, IPR, etc. The Make in India campaign has seen successes and drawbacks. A major success was reported from the mobile phone manufacturing sector, which saw 120 units being set up. This led to the replacement of the import of completely built units (CBUs) by domestically assembled and manufactured units. The country saved Rs 3 lakh crore of possible outflow from 2014. The import of mobile phones is expected to come down.",
+   "Summarized_News":"Make in India is a Government of India scheme launched by Prime Minister Narendra Modi in 2014. It is intended to boost the domestic manufacturing sector and also augment investment into the country. The scheme was launched to encourage domestic manufacturing and investment in the country's manufacturing sector. The Make in India scheme is funded by the government of India and is open to all Indian citizens. It was launched    in 2014 to boost domestic manufacturing, investment and employment in India. It has been launched to help boost India's manufacturing industry.",
+   "hindiSumarize":"मेक इन इंडिया 2014 में प्रधानमंत्री नरेंद्र मोदी द्वारा शुरू की गई भारत सरकार की योजना है। यह घरेलू विनिर्माण क्षेत्र को बढ़ावा देने और देश में निवेश बढ़ाने का इरादा है। इस योजना को देश के विनिर्माण क्षेत्र में घरेलू विनिर्माण और निवेश को प्रोत्साहित करने के लिए शुरू किया गया था। मेक इन इंडिया योजना भारत सरकार द्वारा वित्त पोषित है और यह सभी भारतीय नागरिकों के लिए खुला है। इसे 2014 में भारत में घरेलू विनिर्माण, निवेश और रोजगार को बढ़ावा देने के लिए लॉन्च किया गया था। इसे भारत के विनिर्माण उद्योग को बढ़ावा देने में मदद करने के लिए शुरू किया गया है।",
+   "hindiSimplify":"प्रधानमंत्री ने 15 अगस्त 2014 को अपने स्वतंत्रता दिवस के भाषण में वित्तीय समावेशन पर राष्ट्रीय मिशन के रूप में राष्ट्रीय जन धन योजना की घोषणा की। उद्देश्य देश में पूर्ण वित्तीय सुरक्षा सुनिश्चित करना है। सिस्टम को तीन साल की अवधि में रोल किया जाएगा। सिस्टम का पहला वर्ष 2015 के अंत तक पूरा होने की उम्मीद है।.",
+   "hindiHeading":"प्रधान मंत्री जन धन योजना (PMJDY)",
+   "hindiDate":"9 मई",
+   "hindiSource":"पीएमइंडिया",
+   "simplified":"The Prime Minister announced national sir Jan india award as the National Mission on Financial Inclusion in his Independence Day address on 15th August 2014. The aim is to ensure full financial security in the country. The system will be rolled out over a period of three years. The first year of the system is expected to be completed by the end of 2015.",
+   "Image_Url": "https://d6xcmfyh68wv8.cloudfront.net/learn-content/uploads/2019/08/make-in-india-scheme-sectors-projects-achievements-770x515.png",
+   "Source": "pmindia"
+},
   ]
 export default policiesData
