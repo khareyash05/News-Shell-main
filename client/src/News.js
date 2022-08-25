@@ -92,10 +92,10 @@ const handleScrollPosition = () => {
               </p>
           </div>
           <div className="actionDiv">
-            {/* <button className="actionButtons actionSimplify" onClick={(e)=>{
+            <button className="actionButtons actionSimplify" onClick={(e)=>{
               simplified?setSimplified(false):setSimplified(true)
             }}>{simplified?<p>{props.getPageLang=='en'?'Original Text':'मूल लेख'}</p>:<p>{props.getPageLang=='en'?'Simplify It':'इसे सरल करें'}</p>}</button>
-            <button className="actionButtons " onClick={handleClick}><Link className="moreLink" to={location.pathname==='/'?'news/more':'policies/more'}>{props.getPageLang=='en'?'Analyse It':'विश्लेषण करें'}</Link></button> */}
+            {/* <button className="actionButtons " onClick={handleClick}><Link className="moreLink" to={location.pathname==='/'?'news/more':'policies/more'}>{props.getPageLang=='en'?'Analyse It':'विश्लेषण करें'}</Link></button> */}
             <VolumeUpIcon fontSize="small xs-10" onClick={props.getPageLang ==='en'?speakEnglish.bind(this,props.title,props.content):speakHindi.bind(this,props.title,props.content)}></VolumeUpIcon>
             
           </div>

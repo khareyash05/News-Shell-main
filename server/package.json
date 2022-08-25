@@ -12,6 +12,7 @@
     "mongodb": "^4.8.1",
     "mongoose": "^6.5.0",
     "node-fetch": "^3.2.9",
+    "node-summarizer": "^1.0.7",
     "nodemon": "^2.0.19",
     "python-shell": "^3.0.1",
     "request": "^2.88.2",
