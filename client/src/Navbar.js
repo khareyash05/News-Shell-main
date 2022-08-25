@@ -30,10 +30,6 @@ function Navbar(props) {
           alt="Search"
         />
         <input type="text" id="searchIt" placeholder={props.getSearchLang=='en'?'Search News...':'समाचार खोजें...'} onChange={handleSearch} />
-        <KeyboardVoiceIcon sx={{ fontSize: "20px" }} 
-                style={{cursor:'pointer'}}
-              >    
-      </KeyboardVoiceIcon>
       </div>
     </div>
   );

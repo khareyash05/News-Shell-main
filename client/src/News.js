@@ -41,7 +41,7 @@ function News(props) {
           <div className="actionDiv">
           </div>
           <div className="readMore">
-            <p><a className="linkSrc" onClick={handleClickToOpen}>{props.getPageLang=='en'?'Get Full Context': 'पूरा संदर्भ प्राप्त करें'}</a></p>
+            <p><a className="linkSrc" onClick={handleClickToOpen}>{props.getPageLang=='en'?'Read More': 'पूरा पढ़ें'}</a></p>
             <Dialog fullScreen open={open} onClose={handleToClose}>
               <DialogActions>
                 <Button onClick={handleToClose} 
