@@ -13,8 +13,8 @@ function Content(props) {
     const topics = [
         { id: 0, topic: "All News", category: "top" },
         { id: 1, topic: "Business", category: "business" },
-        { id: 2, topic: "Education", category: "science" },
-        { id: 3, topic: "Entertainment", category: "entertainment" },
+        { id: 2, topic: "Entertainment", category: "entertainment" },
+        { id: 3, topic: "Education", category: "science" },
         { id: 4, topic: "Health", category: "health" },
         { id: 5, topic: "Politics", category: "politics" },
         { id: 6, topic: "Sports", category: "sports" },
@@ -24,8 +24,8 @@ function Content(props) {
   const hindiTopics = [
         { id: 0, topic: "सभी समाचार", category: "top" },
         { id: 1, topic: "व्यापार", category: "business" },
-        { id: 2, topic: "शिक्षा", category: "science" },
-        { id: 3, topic: "मनोरंजन", category: "entertainment" },
+        { id: 2, topic: "मनोरंजन", category: "entertainment" },
+        { id: 3, topic: "शिक्षा", category: "science" },
         { id: 4, topic: "स्वास्थ्य", category: "health" },
         { id: 5, topic: "राजनीति", category: "politics" },
         { id: 6, topic: "खेल", category: "sports" },
