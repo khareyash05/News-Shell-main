@@ -5,6 +5,7 @@ import axios from 'axios'
 function Convert() {
 const [news, setNews] = useState()
 const [simnews, setSimNews] = useState()
+const [simplinews, setSimpliNews] = useState()
     const handleSubmit = (e)=>{
         setNews(e.target.value)
     }
@@ -24,15 +25,17 @@ const handleSumarize = async()=>{
     console.log("News"+gotData.data.news)
     console.log("SImplify"+gotData.data.simplify)
     setSimNews(gotData.data.news)
+    setSimpliNews(gotData.data.simplify)
 }
     console.log(news)
   return (<div className='convert'>
     <form className='formconvert' onSubmit={(e)=>{e.preventDefault()}}>
-        <textarea rows='20' cols='70' onChange={handleSubmit}></textarea>
-        <button onClick={handleSumarize}>Sumarize</button>
-        <button>Simplify</button>
+        <textarea rows='20' cols='40' onChange={handleSubmit}></textarea>
+        <button onClick={handleSumarize}>Sumarize and Simplify</button>
+        {/* <button>Simplify</button> */}
         </form>
-        <textarea rows='20' cols='70' value={simnews}></textarea>
+        <textarea rows='20' cols='40' value={simnews}></textarea>
+        <textarea rows='20' cols='40' value={simplinews}></textarea>
         {/* <input type="text" ></input> */}
         </div>
   )
