@@ -4,13 +4,15 @@
     width: 80%;
     height: 100vh;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-direction: column;
 }
 .formconvert{
     display: flex;
-    justify-content:top;
+    position: relative;
+    top: 3%;
+    /* justify-content:top; */
     align-items: center;
     flex-direction: column;
 }
@@ -21,12 +23,12 @@
 .conversionform{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 80%;
 }
 .uploadingbtn{
-    width: 100%;
+    width: 25%;
     height: 10%;
     display: flex;
     justify-content: center;
@@ -34,9 +36,32 @@
     flex-direction: column;
 }
 .uploadbtn{
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 10%;
+}
+.convertout{
+
+}
+.simplified{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sendingArea, .textingArea{
+    border-radius: 20px;
+    border: none;
+    box-shadow: -6px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+}
+.sendingArea{
+    background-color: #D9D9D9;
+}
+.textingArea{
+    background-color: rgba(66, 133, 244, 0.28);
+}
+.newstext{
+    margin: 5px;
 }

@@ -24,7 +24,6 @@ function loadFileAsText(){
         // document.getElementById("output").innerHTML = textFromFileLoaded;
         setNews(textFromFile)
     };
-  
     fileReader.readAsText(fileToLoad, "UTF-8");
     handleSumarize()
   }
@@ -49,11 +48,12 @@ const handleSumarize = async()=>{
 }
     console.log(news)
   return (
+        <div className='convertout'>
         <div className='convert'>
             <div className='uploadbtn'>
             <input type="file" id="inputfile"></input>
-            <Button variant="contained" onClick={loadFileAsText}>Upload .txt</Button> 
-            {/* <h2 id="output"></h2> */}
+            <Button variant="contained" onClick={loadFileAsText}  style={{maxWidth: '100px', maxHeight: '30px', minWidth: '100px', minHeight: '30px', fontSize:10}}>Upload .txt</Button> 
+            {/* <input id="output" value={textFromFile}></input> */}
             </div>
             <div className='uploadingbtn'>
                 <h2>OR</h2>
@@ -61,15 +61,21 @@ const handleSumarize = async()=>{
             </div>
             <div className='conversionform'>
             <form className='formconvert' onSubmit={(e)=>{e.preventDefault()}}>
-                <textarea rows='20' cols='40' onChange={handleSubmit}></textarea>
+                <textarea className="sendingArea" id="inputting-file" rows='20' cols='40' onChange={handleSubmit}></textarea>
                 {/* <button onClick={handleSumarize}>Sumarize and Simplify</button> */}
-                <Button variant="contained" onClick={handleSumarize} >Summarize and Simplify</Button>
+                <Button variant="contained" onClick={handleSumarize} style={{margin: "10px"}}>Summarize and Simplify</Button>
                 {/* <button>Simplify</button> */}
             </form>
-            <textarea rows='20' cols='40' value={simnews}></textarea>
-            <textarea rows='20' cols='40' value={simplinews}></textarea>
-            {/* <input type="text" ></input> */}
+            <div className='simplified'>
+            <textarea className="textingArea" rows='20' cols='40' value={simnews}></textarea>
+            <h3 className='newstext'>Summarized</h3>
             </div>
+            <div className='simplified'>
+            <textarea className="textingArea" rows='20' cols='40' value={simplinews}></textarea>
+            <h3 className='newstext'>Simplified</h3>
+            </div>
+            </div>
+        </div>
         </div>
   )
 }
