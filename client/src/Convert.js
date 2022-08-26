@@ -2,6 +2,7 @@ import React from 'react'
 import './Convert.css'
 import { useState } from 'react'
 import axios from 'axios'
+import { Button } from '@mui/material';
 function Convert() {
 const [news, setNews] = useState()
 const [simnews, setSimNews] = useState()
@@ -9,6 +10,22 @@ const [simplinews, setSimpliNews] = useState()
     const handleSubmit = (e)=>{
         setNews(e.target.value)
     }
+let textFromFile = " "
+function loadFileAsText(){
+    var fileToLoad = document.getElementById("input-file").files[0]
+    console.log(fileToLoad)
+    var fileReader = new FileReader();
+    fileReader.onload = function(fileLoadedEvent){
+        var textFromFileLoaded = fileLoadedEvent.target.result;
+        textFromFile =textFromFileLoaded ;
+        console.log(textFromFile);
+        document.getElementById("output").value = textFromFileLoaded;
+    };
+  
+    fileReader.readAsText(fileToLoad, "UTF-8");
+    setNews(textFromFile)
+    handleSumarize()
+  }
 const handleSumarize = async()=>{
     let data = {'news':news, "simplify":"this"}
     let thisdata = data
@@ -28,15 +45,28 @@ const handleSumarize = async()=>{
     setSimpliNews(gotData.data.simplify)
 }
     console.log(news)
-  return (<div className='convert'>
-    <form className='formconvert' onSubmit={(e)=>{e.preventDefault()}}>
-        <textarea rows='20' cols='40' onChange={handleSubmit}></textarea>
-        <button onClick={handleSumarize}>Sumarize and Simplify</button>
-        {/* <button>Simplify</button> */}
-        </form>
-        <textarea rows='20' cols='40' value={simnews}></textarea>
-        <textarea rows='20' cols='40' value={simplinews}></textarea>
-        {/* <input type="text" ></input> */}
+  return (
+        <div className='convert'>
+            <div className='uploadbtn'>
+            <input type="file" id="input-file"></input>
+            <Button variant="contained" onClick={loadFileAsText}>Upload .txt</Button> 
+            <input id="output" value={textFromFile}></input>
+            </div>
+            <div className='uploadingbtn'>
+                <h2>OR</h2>
+                <h3>Enter custom text</h3> 
+            </div>
+            <div className='conversionform'>
+            <form className='formconvert' onSubmit={(e)=>{e.preventDefault()}}>
+                <textarea rows='20' cols='40' onChange={handleSubmit}></textarea>
+                {/* <button onClick={handleSumarize}>Sumarize and Simplify</button> */}
+                <Button variant="contained" onClick={handleSumarize} >Summarize and Simplify</Button>
+                {/* <button>Simplify</button> */}
+            </form>
+            <textarea rows='20' cols='40' value={simnews}></textarea>
+            <textarea rows='20' cols='40' value={simplinews}></textarea>
+            {/* <input type="text" ></input> */}
+            </div>
         </div>
   )
 }

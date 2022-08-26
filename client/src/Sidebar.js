@@ -3,6 +3,7 @@ import './Sidebar.css'
 import LanguageIcon from '@mui/icons-material/Language';
 import FlagIcon from '@mui/icons-material/Flag';
 import { NavLink, useLocation } from 'react-router-dom';
+import { Button } from '@mui/material';
 import { useState } from 'react';
 function Sidebar(props) {
   const [currLanguge, setCurrLanguage] = useState('en');
@@ -38,6 +39,9 @@ function Sidebar(props) {
           <option value="hi">हिंदी(भारत)</option>
         </select>
         </div>
+      </div>
+      <div className='bui'>
+        <Button variant="contained" href="/convert" >Enter Local Input</Button>
       </div>
     </div>
   )

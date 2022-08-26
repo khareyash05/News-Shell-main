@@ -65,6 +65,11 @@
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 20px;
 }
+.bui{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @media only screen and (max-width:792px) {
 
 .sideBar{

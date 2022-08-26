@@ -6,10 +6,37 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: column;
 }
 .formconvert{
     display: flex;
     justify-content:top;
     align-items: center;
     flex-direction: column;
+}
+.out{
+    margin: 10px;
+    align-items: center;
+}
+.conversionform{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+}
+.uploadingbtn{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.uploadbtn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
 }
