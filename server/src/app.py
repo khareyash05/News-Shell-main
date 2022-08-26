@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 # from transformers import AutoModelForSeq2SeqLM
 from Simplify import simplify_it
-from indexSumarize import summarize
+from indexSumarize import summarize, hundred_word_summary
 from flask_cors import CORS, cross_origin
 from flask_pymongo import PyMongo
 import requests
@@ -51,8 +51,15 @@ def index():
             final_output += inputs_batch_dict[batch_id]
 
         print(final_output)
-        data['news'] = final_output
-        simplified = simplify_it(final_output)
+        givenLength = None
+        if len(input_text.split())>50:
+            givenLength = int((len(input_text.split())*2)/3)
+        else:
+            givenLength = int(len(input_text.split()))
+        finall_output = hundred_word_summary(final_output, givenLength)
+        print("This is hundred"+finall_output)
+        data['news'] = finall_output
+        simplified = simplify_it(finall_output)
         print(simplified)
         data['simplify'] = simplified
     return data
