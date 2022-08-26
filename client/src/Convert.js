@@ -11,25 +11,23 @@ const [simplinews, setSimpliNews] = useState()
         setNews(e.target.value)
     }
 let textFromFile = " "
-function loadFileAsText(e){
-    var fileToLoad = document.getElementById("input-file").files[0]
+function loadFileAsText(){
+    console.log("rjkfjg");
+    var fileToLoad = document.getElementById("inputfile").files[0]
     console.log(fileToLoad)
-    e.preventDefault();
     var fileReader = new FileReader();
     fileReader.onload = function(fileLoadedEvent){
         var textFromFileLoaded = fileLoadedEvent.target.result;
-        // console.log(fileLoadedEvent)
-        console.log(textFromFileLoaded)
-        // textFromFile =textFromFileLoaded ;
-        // console.log("This is Textfile"+Object.values(textFromFile));
-        // document.getElementById("output").value = textFromFileLoaded;
-        // document.getElementById("inputting-file")
+        textFromFile =textFromFileLoaded ;
+        console.log(textFromFile);
+        // displayContents(textFromFileLoaded);
+        // document.getElementById("output").innerHTML = textFromFileLoaded;
+        setNews(textFromFile)
     };
     fileReader.readAsText(fileToLoad, "UTF-8");
-    
-    setNews(textFromFile)
     handleSumarize()
   }
+
 const handleSumarize = async()=>{
     let data = {'news':news, "simplify":"this"}
     let thisdata = data
@@ -53,9 +51,9 @@ const handleSumarize = async()=>{
         <div className='convertout'>
         <div className='convert'>
             <div className='uploadbtn'>
-            <input type="file" id="input-file"></input>
+            <input type="file" id="inputfile"></input>
             <Button variant="contained" onClick={loadFileAsText}  style={{maxWidth: '100px', maxHeight: '30px', minWidth: '100px', minHeight: '30px', fontSize:10}}>Upload .txt</Button> 
-            <input id="output" value={textFromFile}></input>
+            {/* <input id="output" value={textFromFile}></input> */}
             </div>
             <div className='uploadingbtn'>
                 <h2>OR</h2>
