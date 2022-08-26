@@ -13,22 +13,27 @@ const [simplinews, setSimpliNews] = useState()
 let textFromFile = " "
 function loadFileAsText(){
     console.log("rjkfjg");
-    var fileToLoad = document.getElementById("inputfile").files[0]
+    let fileToLoad = document.getElementById("inputfile").files[0]
     console.log(fileToLoad)
-    var fileReader = new FileReader();
+    let fileReader = new FileReader();
     fileReader.onload = function(fileLoadedEvent){
-        var textFromFileLoaded = fileLoadedEvent.target.result;
+        let textFromFileLoaded = fileLoadedEvent.target.result;
         textFromFile =textFromFileLoaded ;
         console.log(textFromFile);
         // displayContents(textFromFileLoaded);
         // document.getElementById("output").innerHTML = textFromFileLoaded;
+        // document.getElementById("inputting-file").innerHTML = textFromFile
+        setNews('')
         setNews(textFromFile)
     };
+    setNews(textFromFile)
     fileReader.readAsText(fileToLoad, "UTF-8");
     handleSumarize()
   }
 
 const handleSumarize = async()=>{
+    document.getElementById('summarizing').value = ''
+    document.getElementById('simplifying').value = ''
     let data = {'news':news, "simplify":"this"}
     let thisdata = data
     console.log(thisdata)
@@ -67,11 +72,11 @@ const handleSumarize = async()=>{
                 {/* <button>Simplify</button> */}
             </form>
             <div className='simplified'>
-            <textarea className="textingArea" rows='20' cols='40' value={simnews}></textarea>
+            <textarea className="textingArea" id="summarizing" rows='20' cols='40' value={simnews}></textarea>
             <h3 className='newstext'>Summarized</h3>
             </div>
             <div className='simplified'>
-            <textarea className="textingArea" rows='20' cols='40' value={simplinews}></textarea>
+            <textarea className="textingArea" id="simplifying" rows='20' cols='40' value={simplinews}></textarea>
             <h3 className='newstext'>Simplified</h3>
             </div>
             </div>
