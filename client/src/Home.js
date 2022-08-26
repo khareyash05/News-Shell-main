@@ -8,6 +8,7 @@ import More from "./More";
 import SidebarMobile from "./SidebarMobile";
 import Content from './Content'
 import Policies from "./Policies";
+import Convert from "./Convert";
 function Home() {
   const [show, setShow] = useState(false)
   const [currLang, setCurrlang] = useState('English')
@@ -40,6 +41,9 @@ function Home() {
        <Switch>
          <Route exact path="/">
           <Content getLang={currLang} getWords={currWords}/>
+         </Route>
+         <Route exact path="/convert">
+          <Convert/>
          </Route>
          <Route exact path="/more">
           <More />

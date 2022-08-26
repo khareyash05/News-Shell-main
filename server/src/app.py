@@ -1,18 +1,19 @@
 from flask import Flask, request, jsonify
 # from transformers import AutoModelForSeq2SeqLM
 from Simplify import simplify_it
-from indexSumarize import summarize, hundred_word_summary
-
+from indexSumarize import summarize
+from flask_cors import CORS, cross_origin
 from flask_pymongo import PyMongo
 import requests
 import json
 # from dnspython import dns
-
 app = Flask(__name__)
+cors = CORS(app)
 # app.config["MONGO_URI"] = "mongodb://TeamNewshell:eovXKgDbc4ZEtNzs@cluster0.wf0qiyf.mongodb.net/NewshellTest?retryWrites=true&w=majority"
 # mongo = PyMongo(app)
-
+app.config['CORS_HEADERS']= 'Content-Type'
 @app.route('/get', methods=['GET', 'POST'])
+@cross_origin()
 def index():
     global final_output, data
     if request.method == 'POST':
@@ -50,10 +51,8 @@ def index():
             final_output += inputs_batch_dict[batch_id]
 
         print(final_output)
-        hundred = hundred_word_summary(final_output)
-        print("This is hundred",hundred)
-        data['news'] = hundred
-        simplified = simplify_it(hundred)
+        data['news'] = final_output
+        simplified = simplify_it(final_output)
         print(simplified)
         data['simplify'] = simplified
     return data

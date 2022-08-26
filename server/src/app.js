@@ -7,19 +7,7 @@ const newsSchema = require("./model/model");
 const app = express();
 const port = process.env.PORT || 8000;
 const translate = require("translate");
-let sumarizerManager = require("node-summarizer").SummarizerManager;
-let sumarizer = new sumarizerManager("I saw a saw ,to cut a saw. then again I saw ", 3)
-const sum = async() =>{
-  let sumary = await sumarizer.getSummaryByRank().then((sum)=>{
-    return sum
-  })
-  console.log(sumary.summary)
-  let tsumarizer = new sumarizerManager(sumary.summary, 2)
-  let fsumarizer = tsumarizer.getSummaryByFrequency().summary
-  
-  console.log(fsumarizer)
-}
-sum()
+
 // let summary = sumarizer.getSummaryByFrequency().summary
 // console.log("Summart"+JSON.stringify(sumary)+"dfuajd"+summary)
 translate.engine = "google";
