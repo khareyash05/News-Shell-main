@@ -33,7 +33,7 @@ function loadFileAsText(){
 
 const handleSumarize = async()=>{
     document.getElementById('summarizing').value = ''
-    document.getElementById('simplifying').value = ''
+    // document.getElementById('simplifying').value = ''
     let data = {'news':news, "simplify":"this"}
     let thisdata = data
     console.log(thisdata)
@@ -75,10 +75,10 @@ const handleSumarize = async()=>{
             <textarea className="textingArea" id="summarizing" rows='20' cols='40' value={simnews}></textarea>
             <h3 className='newstext'>Summarized</h3>
             </div>
-            <div className='simplified'>
+            {/* <div className='simplified'>
             <textarea className="textingArea" id="simplifying" rows='20' cols='40' value={simplinews}></textarea>
             <h3 className='newstext'>Simplified</h3>
-            </div>
+            </div> */}
             </div>
         </div>
         </div>
